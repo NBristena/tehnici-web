@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header>
-        <h1>MovieTracker</h1>
+    <header class="top">
+        <h1 class="title">MovieTracker</h1>
     </header>
 
-    <article>
+    <article class="main-text">
         <h3>Hello there, movie lover!</h3>
         <p>This site was created for you so that you can easily make an online
         list with the movies that you saw or wish to see.</p>
@@ -21,25 +21,25 @@
 
 
     <div class="watched">
-        <button id="add-watched-button" onclick="clickAddWatched()" >Add movie to WATCHED</button><br><br>
+        <button class="button" id="add-watched-button" onclick="clickAddWatched()" >Add movie to WATCHED</button><br><br>
         
-        <form action="/watched.html" id="form-watched">
-            <input  type="text" id="input-watchled"><br><br>
-            <input  type="submit" value="Submit / Go to list" id="submit-watched"><br>
+        <form class="form" action="/watched.html" id="form-watched">
+            <input class="form-input" type="text" id="input-watchled"><br><br>
+            <input class="form-input" type="submit" id="submit-watched" value="Submit / Go to list"><br>
         </form><br>
     </div>
 
     <div class="watchlist">
-        <button id="add-watchlist-button" onclick="clickAddWatchlist()">Add movie to WATCHLIST</button><br><br>
+        <button class="button" id="add-watchlist-button" onclick="clickAddWatchlist()">Add movie to WATCHLIST</button><br><br>
         
-        <form action="/watchlist.html" id="form-watchlist">
-            <input  type="text" id="input-watchllist"><br><br>
-            <input  type="submit" value="Submit / Go to list" id="submit-watchlist"><br>
+        <form class="form" action="/watchlist.html" id="form-watchlist">
+            <input class="form-input" type="text" id="input-watchllist"><br><br>
+            <input class="form-input" type="submit" id="submit-watchlist" value="Submit / Go to list"><br>
         </form><br>
     </div>
     
-    <footer>
-        <p>If you have any feedback or ideas on how we could improve our site,
+    <footer class="bottom">
+        <p class="feedback-text">If you have any feedback or ideas on how we could improve our site,
         write us via <a href="mailto:customer@support.com">email</a>.</p>
     </footer>
 

@@ -9,49 +9,50 @@
 </head>
 
 <body>
-    <header>
-        <h1>MovieTracker</h1>
+    <header class="top">
+        <h1 class="title">MovieTracker</h1>
     </header>
-    <div id="left">
+        
+    <div class="table">
         <h3 id="table-title">Watched movies</h3>
         
         <table id="table">
         <!--<tr>  <th>Watched movies</th>  </tr>-->
-            <tr>  <td>movie_title_11</td>  </tr>
-            <tr>  <td>movie_title_12</td>  </tr>
-            <tr>  <td>movie_title_13</td>  </tr>
-            <tr>  <td>movie_title_14</td>  </tr>
-            <tr>  <td>movie_title_15</td>  </tr>
-            <tr>  <td>movie_title_16</td>  </tr>
+            <tr>  <td class="table-row">movie_title_11</td>  </tr>
+            <tr>  <td class="table-row">movie_title_12</td>  </tr>
+            <tr>  <td class="table-row">movie_title_13</td>  </tr>
+            <tr>  <td class="table-row">movie_title_14</td>  </tr>
+            <tr>  <td class="table-row">movie_title_15</td>  </tr>
+            <tr>  <td class="table-row">movie_title_16</td>  </tr>
         </table><br><br>
     </div>
 
     <aside>
-        <div class="edit-delete">
-            <button id="edit-button" onclick="clickEdit()" >Edit a movie title</button><br><br>
+        <div class="edit-delete-back">
+            <button class="button" id="edit-button" onclick="clickEdit()" >Edit a movie title</button><br><br>
             
-            <form action="" id="form-edit">
+            <form class="form" action="" id="form-edit">
                 Replace title:<br>
-                <input  type="text" id="edit-title"><br><br>
+                <input class="form-input" type="text" id="edit-title"><br><br>
                 With title:<br>
-                <input  type="text" id="edit-with-title" ><br><br>
-                <input  type="submit" id="submit-edit"><br>
+                <input class="form-input" type="text" id="edit-with-title" ><br><br>
+                <input class="form-input" type="submit" id="submit-edit"><br>
             </form><br>
 
-            <button id="delete-button" onclick="clickDelete()">Erase a movie title</button><br><br>
+            <button class="button" id="delete-button" onclick="clickDelete()">Erase a movie title</button><br><br>
             
-            <form action="" id="form-delete">
+            <form class="form" action="" id="form-delete">
                 Delete the movie titled:<br>
-                <input  type="text" id="delete-title"><br><br>
-                <input  type="submit" id="submit-delete"><br>
+                <input class="form-input" type="text" id="delete-title"><br><br>
+                <input class="form-input" type="submit" id="submit-delete"><br>
             </form><br><br>
 
-            <button id="back-button" onclick="location.href='/index.html'">Go back to main page</button><br>
+            <button class="button" id="back-button" onclick="location.href='/index.html'">Go back to main page</button><br>
         </div>
     </aside> 
 
-    <footer>
-        <p>If you have any feedback or ideas on how we could improve our site,
+    <footer class="bottom">
+        <p class="feedback-text">If you have any feedback or ideas on how we could improve our site,
         write us via <a href="mailto:customer@support.com">email</a>.</p>
     </footer>
 
