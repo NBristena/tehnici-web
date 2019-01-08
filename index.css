@@ -13,60 +13,61 @@ body{
     grid-column:1 / 3;
     grid-row-start:1;
     border:none;
+    height:100%;
+    width:100%;
 }.title{ 
     color: #1B0421;
-    margin-left: 250px;
+    margin-left: 20%;
 }
 
 .main-text{
-    font-family: Courier New, monospace;
     color:white;
     grid-row-start:2;
     grid-column:1 / 3;
-    margin-left: 50px;
+    margin-left: 5%;
 }
 
-.watched{
+.watchlist{
     border: 1px solid;
     order:1;
     grid-row-start:3;
-    margin:100px 0 0 350px;
+    grid-column-start:1;
+    margin:20% 0 0 60%;
     border:none;
 }
-.watchlist{
+.watched{
     border: 1px solid;
     order:2;
     grid-row-start:3;
+    grid-column-start:2;
     margin:100px 0 0 50px;
     border:none;
 }
 
 .button{
-    font-family: Courier New, monospace;
     background-color: darkslateblue;
     color: #D0BDD5;
     padding: 7px 7px;
     font-size: 16px;
+    font-family: Courier New, monospace;
 }
 
-.form{
+.form-input{
     display:block;
-}.form-input{
-    font-family: Courier New, monospace;
     background-color: #D0BDD5;
     color: #1B0421;
     padding: 5px 5px;
     font-size: 15px;
+    font-family: Courier New, monospace;
 }
 
-.bottom{
+.feedback-footer{
     border: 1px solid;
     background-image: url("footer.jpg");
     order:3;
     grid-column:1 / 3;
     grid-row-start:4;
     border:none;
-}.feedback-text{
+    text-align: center;
     color:#C895D8;
-    margin-left: 50px;
 }

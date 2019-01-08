@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>MovieTracker</title>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -20,31 +20,33 @@
     </article>
 
 
-    <div class="watched">
-        <button class="button" id="add-watched-button" onclick="clickAddWatched()" >Add movie to WATCHED</button><br><br>
-        
-        <form class="form" action="/watched.html" id="form-watched">
-            <input class="form-input" type="text" id="input-watchled"><br><br>
-            <input class="form-input" type="submit" id="submit-watched" value="Submit / Go to list"><br>
-        </form><br>
-    </div>
-
     <div class="watchlist">
         <button class="button" id="add-watchlist-button" onclick="clickAddWatchlist()">Add movie to WATCHLIST</button><br><br>
         
-        <form class="form" action="/watchlist.html" id="form-watchlist">
-            <input class="form-input" type="text" id="input-watchllist"><br><br>
-            <input class="form-input" type="submit" id="submit-watchlist" value="Submit / Go to list"><br>
-        </form><br>
+        <form class="form" id="form-watchlist" onsubmit="return submit();" action="/watchlist.html">
+            <input class="form-input" type="text" id="input-watchllist"><br>
+            <!--<input class="form-input" type="submit" id="submit-watchlist" value="Submit / Go to list"><br>-->
+        </form>
+        <button class="form-input" id="submit-watchlist" onclick="submitWatchlist()">Submit / Go to list</button><br>
     </div>
+
+    <div class="watched">
+        <button class="button" id="add-watched-button" onclick="clickAddWatched()" >Add movie to WATCHED</button><br><br>
+        
+        <form class="form" id="form-watched">
+            <input class="form-input" type="text" id="input-watched"><br>
+            <!--<input class="form-input" type="submit" id="submit-watched" value="Submit / Go to list" onclick="submit()"><br>-->
+        </form>
+        <button class="form-input" id="submit-watched" onclick="submitWatched()">Submit / Go to list</button><br>
+    </div>
+  
     
-    <footer class="bottom">
-        <p class="feedback-text">If you have any feedback or ideas on how we could improve our site,
+    <footer class="feedback-footer">
+        <p>If you have any feedback or ideas on how we could improve our site,
         write us via <a href="mailto:customer@support.com">email</a>.</p>
     </footer>
 
     <script src="index.js"></script>
-
 </body>
 
 </html>

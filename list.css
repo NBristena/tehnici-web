@@ -1,7 +1,7 @@
 body{
     background-image: url("body.png"); 
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 65% 35%;
     grid-template-rows: 80px 500px 50px;
     font-family: Courier New, monospace;
 }
@@ -15,24 +15,23 @@ body{
     border:none;
 }.title{ 
     color: #1B0421;
-    margin-left: 250px;
+    margin-left: 20%;
 }
 
 .table{
     color:white;
-    margin:0 0 0 50px;
+    margin:0 0 0 10%;
     grid-row-start:2;
     display:block;
 }.table-row{
     border: 1px solid white;
-    width: 500px;
-    height: 35%;
+    width: 70%;
     font-size: 16px;
     text-align: center;
 }
 
 .edit-delete-back{
-    margin-top: 20px;
+    margin-top: 5%;
 }
 .button{
     font-family: Courier New, monospace;
@@ -61,5 +60,5 @@ body{
     border:none;
 }.feedback-text{
     color:#C895D8;
-    margin-left: 50px;
+    margin-left: 5%;
 }

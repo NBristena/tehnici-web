@@ -18,12 +18,12 @@
         
         <table id="table">
         <!--<tr>  <th>Watched movies</th>  </tr>-->
-            <tr>  <td class="table-row">movie_title_1</td>  </tr>
-            <tr>  <td class="table-row">movie_title_2</td>  </tr>
-            <tr>  <td class="table-row">movie_title_3</td>  </tr>
-            <tr>  <td class="table-row">movie_title_4</td>  </tr>
-            <tr>  <td class="table-row">movie_title_5</td>  </tr>
-            <tr>  <td class="table-row">movie_title_6</td>  </tr>
+            <tr>  <td class="table-row">titlu_hardcodat_1</td>  </tr>
+            <tr>  <td class="table-row">titlu_hardcodat_2</td>  </tr>
+            <tr>  <td class="table-row">titlu_hardcodat_3</td>  </tr>
+            <tr>  <td class="table-row">titlu_hardcodat_4</td>  </tr>
+            <tr>  <td class="table-row">titlu_hardcodat_5</td>  </tr>
+            <tr>  <td class="table-row">titlu_hardcodat_6</td>  </tr>
         </table><br><br>
     </div>
 
@@ -34,17 +34,19 @@
             Replace title:<br>
             <input class="form-input" type="text" id="edit-title"><br><br>
             With title:<br>
-            <input class="form-input" type="text" id="edit-with-title" ><br><br>
-            <input class="form-input" type="submit" id="submit-edit"><br>
-        </form><br>
+            <input class="form-input" type="text" id="edit-with-title" ><br>
+            <!--<input class="form-input" type="submit" id="submit-edit"><br>-->
+        </form>
+        <button class="form-input" id="submit-edit" onclick="submitEdit()">Submit / Go to list</button><br>
 
         <button class="button" id="delete-button" onclick="clickDelete()">Erase a movie title</button><br><br>
         
         <form class="form" action="" id="form-delete">
             Delete the movie titled:<br>
-            <input class="form-input" type="text" id="delete-title"><br><br>
-            <input class="form-input" type="submit" id="submit-delete"><br>
-        </form><br><br>
+            <input class="form-input" type="text" id="delete-title"><br>
+            <!--<input class="form-input" type="submit" id="submit-delete"><br>-->
+        </form>
+        <button class="form-input" id="submit-delete" onclick="submitDelete()">Submit / Go to list</button><br><br>
 
         <button class="button" id="back-button" onclick="location.href='/index.html'">Go back to main page</button><br>
     </aside> 
