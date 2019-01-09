@@ -16,14 +16,14 @@
     <div class="table" id="watchlist">
         <h2 id="table-title">Watchlist</h2>
         
-        <table id="table" name="watchlist"></table>
+        <table id="table" title="watchlist"></table>
         <p class="empty-table" id="empty">There are no movies in this list yet.</p>
     </div>
 
     <aside class="edit-delete-back">
         <div>
             <button class="button" id="edit-button" onclick="clickEdit()">Mark as watched</button><br><br>
-            <form class="form" action="" id="form-edit">
+            <form class="form" id="form-edit">
                 Watched the movie titled:<br>
                 <input class="form-input" type="text" id="edit-seen"><br>
                 <input class="form-input" type="button" id="submit-edit" value="Submit" onclick="submitEdit('edit-seen')"><br>
@@ -32,7 +32,7 @@
 
         <div>
             <button class="button" id="delete-button" onclick="clickDelete()">Erase a movie</button><br><br>
-            <form class="form" action="" id="form-delete">
+            <form class="form" id="form-delete">
                 Delete the movie titled:<br>
                 <input class="form-input" type="text" id="delete-watchlist"><br>
                 <input class="form-input" type="button" id="submit-delete" value="Submit" onclick="submitDelete('delete-watchlist')"><br>

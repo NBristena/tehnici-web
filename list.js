@@ -16,12 +16,12 @@ async function createTable(){
 
     for(let i of movieList){
         
-        if(table.getAttribute("name") ==="watchlist"){
+        if(table.title ==="watchlist"){
             if( i.seen === "NO"){
                 index++;
                 tableRow += `<tr>  <td>${index}</td>  <td>${i.title}</td>  <tr>`;
             }
-        }else if(table.getAttribute("name") === "watched"){
+        }else if(table.title === "watched"){
             if( i.seen === "YES"){
                 index++;
                 tableRow += `<tr>  <td>${index}</td>  <td>${i.title}</td>  <tr>`;
