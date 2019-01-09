@@ -24,20 +24,20 @@
         <button class="button" id="add-watchlist-button" onclick="clickAddWatchlist()">Add movie to WATCHLIST</button><br><br>
         
         <form class="form" id="form-watchlist" onsubmit="return submit();" action="/watchlist.html">
-            <input class="form-input" type="text" id="input-watchllist"><br>
-            <!--<input class="form-input" type="submit" id="submit-watchlist" value="Submit / Go to list"><br>-->
+            Title:<br>
+            <input class="form-input" type="text" id="input-watchlist"><br>
+            <input type="button" class="form-input" id="submit-watchlist" value=" Submit / Go to list" onclick="submitTitle('NO','input-watchlist')">
         </form>
-        <button class="form-input" id="submit-watchlist" onclick="submitWatchlist()">Submit / Go to list</button><br>
     </div>
 
     <div class="watched">
         <button class="button" id="add-watched-button" onclick="clickAddWatched()" >Add movie to WATCHED</button><br><br>
         
         <form class="form" id="form-watched">
+            Title:<br>
             <input class="form-input" type="text" id="input-watched"><br>
-            <!--<input class="form-input" type="submit" id="submit-watched" value="Submit / Go to list" onclick="submit()"><br>-->
+            <input type="button" class="form-input" id="submit-watched" value=" Submit / Go to list" onclick="submitTitle('YES','input-watched')">
         </form>
-        <button class="form-input" id="submit-watched" onclick="submitWatched()">Submit / Go to list</button><br>
     </div>
   
     
@@ -47,6 +47,7 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="data.js"></script>
 </body>
 
 </html>

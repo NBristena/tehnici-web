@@ -1,0 +1,24 @@
+{
+  "movies": [
+    { 
+        "id": 1,
+        "title": "title_1",
+        "seen": "YES"
+    },
+    { 
+        "id": 2,
+        "title": "title_2",
+        "seen": "NO"
+    },
+    { 
+        "id": 3,
+        "title": "title_3",
+        "seen": "YES"
+    },
+    { 
+        "id": 4,
+        "title": "title_4",
+        "seen": "NO"
+    }
+  ]
+}

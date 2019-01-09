@@ -1,84 +1,62 @@
-function clickAddWatched(){
-    if(document.getElementById("input-watched").style.display == "none"){
-        document.getElementById("input-watched").style.display = "block";
-    }else{
-        document.getElementById("input-watched").style.display = "none";
-    }
-    if(document.getElementById("submit-watched").style.display == "none"){
-        document.getElementById("submit-watched").style.display = "block";
-    }else{
-        document.getElementById("submit-watched").style.display = "none";
-    }
-    return 0;
-}
-
 function clickAddWatchlist(){
-    if(document.getElementById("input-watchlist").style.display == "none"){
-        document.getElementById("input-watchlist").style.display = "block"; 
+    if(document.getElementById("form-watchlist").style.display == "none"){
+        document.getElementById("form-watchlist").style.display = "block"; 
     }else{
-        document.getElementById("input-watchlist").style.display = "none";
+        document.getElementById("form-watchlist").style.display = "none";
     }
-    if(document.getElementById("submit-watchlist").style.display == "none"){
-        document.getElementById("submit-watchlist").style.display = "block"; 
+    return 0;
+}
+function clickAddWatched(){
+    if(document.getElementById("form-watched").style.display == "none"){
+        document.getElementById("form-watched").style.display = "block";
     }else{
-        document.getElementById("submit-watchlist").style.display = "none";
+        document.getElementById("form-watched").style.display = "none";
     }
     return 0;
 }
 
-async function getMovies(){
-    var URL = "http://localhost:3000/movies/";
-    const res = await fetch(URL);
-    const json = await res.json();
-    console.log( json);
-    return json;
-}
 
 function checkTitle(movieList,thisTitle){
-    let id,title,seen;
     let exists = false;
     console.log("titlul introdus:" + thisTitle);
     for(let i of movieList){
         if(i.title === thisTitle){
             exists = true;
-            id = i.id;
-            title = i.title;
-            seen = i.seen;
             break;
         }
     }
     if(exists === true){
         console.log("E deja in lista:");
-        console.log("id: "+id);
-        console.log("title: "+title);
-        console.log("seen? "+seen);
-
+        return 0;
     }
     else{
         console.log("Adaugam!");
+        return 1;
     }
 }
 
-async function submitWatchlist(){
-    let movieList = await getMovies();
-    let thisTitle = document.getElementById("input-watchlist").value;
+async function submitTitle(isSeen, id){
+    let movieList = await manageData('GET','');
+    let thisTitle = document.getElementById(id).value;
 
     if(thisTitle.match(/[a-z0-9]/i)){
-        checkTitle(movieList,thisTitle);
+        if(checkTitle(movieList,thisTitle)){
+            console.log(movieList.length + 1);
+            var myData={
+                id: movieList.length + 1,
+                title: thisTitle,
+                seen: isSeen
+            };
+            await manageData("POST",myData);
+        }
     }
-    window.location.assign("watchlist.html");
-    
+   if(isSeen.match(/NO/)){
+        location.assign("watchlist.html");
+    }
+    else{
+        location.assign("watched.html");
+    }
 }
 
-async function submitWatched(){
-    let movieList = await getMovies();
-    let thisTitle = document.getElementById("input-watched").value;
-
-    if(thisTitle.match(/[a-z0-9]/i)){
-        checkTitle(movieList,thisTitle);
-    }
-    window.location.assign("watched.html");
-    
-}
 
 
