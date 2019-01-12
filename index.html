@@ -9,45 +9,50 @@
 </head>
 
 <body>
-    <header class="top">
-        <h1 class="title">MovieTracker</h1>
-    </header>
+    <div class="frame">
 
-    <article class="main-text">
-        <h3>Hello there, movie lover!</h3>
-        <p>This site was created for you so that you can easily make an online
-        list with the movies that you saw or wish to see.</p>
-    </article>
-
-
-    <div class="watchlist">
-        <button class="button" id="add-watchlist-button" onclick="clickAddWatchlist()">Add movie to WATCHLIST</button><br><br>
+        <div class="top">
+            <header class="title">
+                MovieTracker
+            </header>
         
-        <form class="form" id="form-watchlist" onsubmit="return submit();" action="/watchlist.html">
-            Title:<br>
-            <input class="form-input" type="text" id="input-watchlist"><br>
-            <input type="button" class="form-input" id="submit-watchlist" value=" Submit / Go to list" onclick="submitTitle('NO','input-watchlist')">
-        </form>
-    </div>
+            <article class="main-text">
+                <h3>Hello there, movie lover!</h3>
+                <p>This site was created for you so that you can easily make an online
+                list with the movies that you saw or wish to see.</p>
+            </article>
+        </div>
 
-    <div class="watched">
-        <button class="button" id="add-watched-button" onclick="clickAddWatched()" >Add movie to WATCHED</button><br><br>
+        <div class="mid">
+            <div class="watchlist">
+                <label class="label" id="add-label" >&#8675 Add movie to WATCHLIST</label><br><br>
+                
+                <form class="form" id="form-watchlist" onsubmit="return submit();" action="/watchlist.html">
+                    Title:<br>
+                    <input class="form-input" type="text" id="input-watchlist"><br>
+                    <input type="button" class="form-input" id="submit-watchlist" value="Submit / Go to list &#8605" onclick="submitTitle('NO','input-watchlist')">
+                </form>
+            </div>
+
+            <div class="watched">
+                <label class="label" id="add-label">&#8675 Add movie to WATCHED</label><br><br>
+                
+                <form class="form" id="form-watched">
+                    Title:<br>
+                    <input class="form-input" type="text" id="input-watched"><br>
+                    <input type="button" class="form-input" id="submit-watched" value="Submit / Go to list &#8605" onclick="submitTitle('YES','input-watched')">
+                </form>
+            </div>
+        </div>
         
-        <form class="form" id="form-watched">
-            Title:<br>
-            <input class="form-input" type="text" id="input-watched"><br>
-            <input type="button" class="form-input" id="submit-watched" value=" Submit / Go to list" onclick="submitTitle('YES','input-watched')">
-        </form>
-    </div>
-  
-    
-    <footer class="feedback-footer">
-        <p>If you have any feedback or ideas on how we could improve our site,
-        write us via <a href="mailto:customer@support.com">email</a>.</p>
-    </footer>
+        <footer class="bottom">
+            If you have any feedback or ideas on how we could improve our site,
+            write us via <a href="mailto:customer@support.com">email</a>.
+        </footer>
 
-    <script src="index.js"></script>
-    <script src="data.js"></script>
+        <script src="index.js"></script>
+        <script src="data.js"></script>
+    </div>
 </body>
 
 </html>
