@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MovieTracker</title>
     <link rel="stylesheet" href="list.css">
 </head>
@@ -15,34 +16,34 @@
         </header>
             
         <div class="mid">
-            <div class="table" id="watched">
-                <h2 id="table-title">Watched movies</h2>
+            <section class="table" id="watched">
+                <h2 id="table-title">Watched movies &#8628;</h2>
                 
                 <p class="empty-table-text" id="empty">There are no movies in this list yet.</p>
 
                 <table id="table" title="watched"></table>
-            </div>
+            </section>
 
             <aside class="edit-delete-back">
                 <div>
-                    <button class="button" id="edit-button" onclick="clickEdit()">Mark as unwatched</button><br><br>
+                    <button class="button" id="edit-button" onclick="clickEdit()">&#8675; Mark as unwatched</button><br><br>
                     <form class="form" id="form-edit">
                         Unwatch the movie titled:<br>
                         <input class="form-input" type="text" id="edit-unseen"><br>
-                        <input class="form-input" type="button" id="submit-edit" value="Submit" onclick="submitEdit('edit-unseen')"><br>
+                        <input class="form-input" type="button" id="submit-edit" value="Submit &#8620;" onclick="submitEdit('edit-unseen')"><br>
                     </form>
                 </div><br>
             
                 <div>
-                    <button class="button" id="delete-button" onclick="clickDelete()">Erase a movie title</button><br><br>
+                    <button class="button" id="delete-button" onclick="clickDelete()">&#8675; Erase a movie title</button><br><br>
                     <form class="form" id="form-delete">
                         Delete the movie titled:<br>
                         <input class="form-input" type="text" id="delete-watched"><br>
-                        <input class="form-input" type="button" id="submit-delete" value="Submit" onclick="submitDelete('delete-watched')"><br>
+                        <input class="form-input" type="button" id="submit-delete" value="Submit &#8669;" onclick="submitDelete('delete-watched')"><br>
                     </form>
                 </div><br>
                 
-                <button class="button" id="back-button" onclick="location.href='/index.html'">Go back to main page</button><br>
+                <button class="button" id="back-button" onclick="location.href='/index.html'">&#8617; Go back to main page</button><br>
             </aside>  
         </div>
 

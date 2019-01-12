@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>MovieTracker</title>
     <link rel="stylesheet" href="index.css">
@@ -25,25 +26,25 @@
 
         <div class="mid">
             <div class="watchlist">
-                <label class="label" id="add-label" >&#8675 Add movie to WATCHLIST</label><br><br>
+                <label class="label" id="watchlist-add-label" >&#8675; Add movie to WATCHLIST</label><br><br>
                 
                 <form class="form" id="form-watchlist" onsubmit="return submit();" action="/watchlist.html">
                     Title:<br>
                     <input class="form-input" type="text" id="input-watchlist"><br>
-                    <input type="button" class="form-input" id="submit-watchlist" value="Submit / Go to list &#8605" onclick="submitTitle('NO','input-watchlist')">
+                    <input type="button" class="form-input" id="submit-watchlist" value="Submit / Go to list &#8605;" onclick="submitTitle('NO','input-watchlist')">
                 </form>
-            </div>
+            </div><br><br>
 
             <div class="watched">
-                <label class="label" id="add-label">&#8675 Add movie to WATCHED</label><br><br>
+                <label class="label" id="watched-add-label">&#8675; Add movie to WATCHED</label><br><br>
                 
                 <form class="form" id="form-watched">
                     Title:<br>
                     <input class="form-input" type="text" id="input-watched"><br>
-                    <input type="button" class="form-input" id="submit-watched" value="Submit / Go to list &#8605" onclick="submitTitle('YES','input-watched')">
+                    <input type="button" class="form-input" id="submit-watched" value="Submit / Go to list &#8605;" onclick="submitTitle('YES','input-watched')">
                 </form>
             </div>
-        </div>
+        </div><br><br>
         
         <footer class="bottom">
             If you have any feedback or ideas on how we could improve our site,

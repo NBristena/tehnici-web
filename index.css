@@ -1,5 +1,6 @@
 html, body{
     height: 100%;
+    margin: 0px auto;
 }
 body{
     background: url("background.jpg") no-repeat center center fixed; 
@@ -10,9 +11,12 @@ body,.top,.bottom{
     -o-background-size: cover;
     background-size: cover;
 
+    flex-wrap:wrap;
     word-wrap: break-word;
 }
 .frame{
+    width: 1280px;
+    margin: 0px auto;
     height: 100%;
     display: flex; 
     flex-direction:column;
@@ -23,39 +27,57 @@ body,.top,.bottom{
 
 .top{
     width:100%;
+    padding-top: 5px;
 }
 .title{
     background-image: url("header.jpg") ;
     border:none;
     border-radius: 3px;
-    width:100%;
+    width: 100%;
+    margin: 0px auto;
     order: -1;
 
     color: rgb(175, 149, 216);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
+    flex-wrap:wrap;
+    word-wrap: break-word;
 }
 .main-text{
     margin: 1% 5%;
     max-width: 1000px;
     color:white;
+    font-size: 20px;
+    flex-wrap:wrap;
+    word-wrap: break-word;
 }
 
 .mid{
     display: flex; 
     justify-content: space-around;
-    flex-wrap:wrap;
     
-    padding: 0 150px 150px 150px;
+
+    width: 90%;
+    margin: 0px auto;
 }
 .watchlist{
     color: #D0BDD5;
     order: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
 }
 .watched{
     color: #D0BDD5;
     order: 2;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
 }
 
 .label{
@@ -65,8 +87,10 @@ body,.top,.bottom{
     border: none;
     border-radius: 5px;
     padding: 7px 7px;
-    font-size: 16px;
+    font-size: 22px;
     font-family: Courier New, monospace;
+    flex-wrap:wrap;
+    word-wrap: break-word;
 }
 
 .form{
@@ -78,8 +102,10 @@ body,.top,.bottom{
     color: #1B0421;
     border-radius: 3px;
     padding: 5px 7px;
-    font-size: 15px;
+    font-size: 18px;
     font-family: Courier New, monospace;
+    flex-wrap:wrap;
+    word-wrap: break-word;
 }.form-input:hover{
     background-color: rgb(158, 133, 165);
 }
@@ -94,4 +120,57 @@ body,.top,.bottom{
     
     color:#C895D8;
     text-align: center;
+    font-size: 18px;
+    flex-wrap:wrap;
+    word-wrap: break-word;
+}
+
+/**************/
+/* Responsive */
+/**************/
+
+/* Desktop */
+@media screen and (max-width:2560px){
+    .frame{
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+/* Tableta */
+@media screen and (max-width:1280px){
+    .frame{
+        width: 98%;
+        margin: 0px auto;
+        overflow: scroll;
+    }
+}
+/* Telefon */
+@media screen and (max-width:768px){
+    .main-text{
+        font-size: 26px;
+    }
+    .mid{
+        height: 50%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .watchlist{
+        width: 80%;
+        font-size: 30px;
+    }
+    .watched{
+        width: 80%;
+        padding-top: 100px;
+        font-size: 30px;
+    }
+    .label{
+        font-size: 30px;
+    }
+    .form-input{
+        font-size: 30px;
+    }
+    .bottom{
+        font-size: 26px;
+    }
 }

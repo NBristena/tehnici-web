@@ -1,5 +1,6 @@
 html, body{
     height: 100%;
+    margin: 0px auto;
 }
 body{
     background: url("background.jpg") no-repeat center center fixed; 
@@ -9,10 +10,12 @@ body,.top,.bottom{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
+    flex-wrap: wrap;
     word-wrap: break-word;
 }
 .frame{
+    width: 1280px;
+    margin: 0px auto;
     height: 100%;
     display: flex; 
     flex-direction:column;
@@ -26,56 +29,72 @@ body,.top,.bottom{
     border:none;
     border-radius: 3px;
     width:100%;
+    padding-top: 5px;
     order: -1;
 
     color: rgb(175, 149, 216);
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
 }
 
-.mid{
+
+.mid{ 
     display: flex; 
     justify-content: space-between;
 
-    flex-wrap:wrap;
-    min-height: 50%;
-
+    min-height: 500px;
+    width: 95%;
+    margin: 0px auto;
+    /* justify-self: center; */
 }
 
 .empty-table-text{
     display: none;
+}.table{
+    display:block;
+    width: 400px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }.table#watchlist{
     color: rgb(122, 218, 247);
-    display:block;
-    padding-left: 200px;
 }.table#watched{
     color: rgb(122, 247, 122);
-    display:block;
-    padding-left: 200px;
+}
+.table #table{
+    width: 90%;
 }
 .table th{
     background-color: rgb(43, 13, 82);
     opacity:0.9;
     border: 1px solid rgb(13, 4, 26);
     border-radius: 6px;
-    /* width: 40%; */
     padding: 8px 15px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }.table td{
     border: 1px solid rgb(195, 158, 236);
     border-radius: 4px;
-    width: 40%;
     padding: 4px 15px;
-    font-size: 16px;
+    font-size: 17px;
     text-align: center;
 }
+.table td:nth-child(1), .table th:nth-child(1) {
+    width: 20%;
+}
+.table td:nth-child(2), .table th:nth-child(2) {
+    width: 80%;
+}
+
 
 .edit-delete-back{
     padding-top: 50px;
-    padding-right: 200px;
+    width: 300px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
 }
 .button{
     background-color: rgb(209, 130, 56);
@@ -83,7 +102,7 @@ body,.top,.bottom{
     border: 1px solid rgba(44, 5, 59);
     border-radius: 6px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
     font-family: Courier New, monospace;
 }.button:hover{
     background-color: rgb(107, 50, 4);
@@ -99,14 +118,15 @@ body,.top,.bottom{
     color: #1B0421;
     border-radius: 3px;
     padding: 5px 5px;
-    font-size: 15px;
+    font-size: 18px;
 }.form-input:hover{
     background-color: rgb(158, 133, 165);
 }
 
+
 .bottom{
     background-image: url("footer.jpg");
-    margin-top: 50px;
+    /* margin-top: 50px; */
     border:none;
     border-radius: 3px;
     width:100%;
@@ -115,4 +135,90 @@ body,.top,.bottom{
     
     color:#C895D8;
     text-align: center;
+    font-size: 18px;
 }
+
+/**************/
+/* Responsive */
+/**************/
+
+/* Desktop */
+@media screen and (max-width:2560px){
+    .frame{
+        width: 95%;
+        margin: 0px auto;
+    }
+    .mid{
+        width: 80%;
+        margin: 0px auto;
+    }
+}
+/* Tableta */
+@media screen and (max-width:1280px){
+    .mid{
+        width: 90%;
+        margin: 0px auto;
+    }
+}
+/* Tabelul si butoanele nu mai incap pe aceeasi linie */
+@media screen and (max-width:819px){
+    .mid{
+        flex-direction: column ;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+/* Telefon */
+@media screen and (max-width:768px) and (min-height:900px){
+    .frame{
+        width: 95%;
+        margin: 0px auto;
+        overflow: scroll;
+    }
+    .mid{
+        width: 80%;
+        margin: 0 auto;
+
+        flex-direction: column ;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 26px;
+        overflow: scroll;
+    }
+    .table{
+        width:80%;
+        padding-bottom: 50px;
+    }
+    .table th{
+        font-size: 26px;
+    }
+    .table td{
+        font-size: 24px;
+    }
+    .edit-delete-back{
+        width:80%;
+        max-height: 1000px;
+    }
+    .button{
+        font-size: 26px;
+    }
+    .form-input{
+        font-size: 26px;
+    }
+    .bottom{
+        font-size: 26px;
+    }
+}
+
+/* @media screen and (max-width:399px){
+    .table{
+        width: 95%;
+        margin: 0px auto;
+    }
+    .table td:nth-child(1), .table th:nth-child(1) {
+        width: 10%;
+    }
+    .table td:nth-child(2), .table th:nth-child(2) {
+        width: 90%;
+    }
+} */
