@@ -109,7 +109,7 @@ body,.top,.bottom{
 }
 
 .form{
-    display:none;
+    display:block;
     color:#D0BDD5;
 }.form-input{
     display:block;
@@ -161,29 +161,34 @@ body,.top,.bottom{
     }
 }
 /* Tabelul si butoanele nu mai incap pe aceeasi linie */
-@media screen and (max-width:819px){
+@media screen and (max-width:822px){
+    .frame{
+        height: 1500px;
+        overflow-y: visible;
+    }
     .mid{
+        height
         flex-direction: column ;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
     }
 }
 /* Telefon */
-@media screen and (max-width:768px) and (min-height:900px){
+@media screen and (max-width:768px) {
     .frame{
         width: 95%;
         margin: 0px auto;
-        overflow: scroll;
+        height: 1500px;
+        overflow-y: visible;
     }
     .mid{
         width: 80%;
         margin: 0 auto;
 
         flex-direction: column ;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
         font-size: 26px;
-        overflow: scroll;
     }
     .table{
         width:80%;
@@ -197,7 +202,6 @@ body,.top,.bottom{
     }
     .edit-delete-back{
         width:80%;
-        max-height: 1000px;
     }
     .button{
         font-size: 26px;
@@ -209,16 +213,3 @@ body,.top,.bottom{
         font-size: 26px;
     }
 }
-
-/* @media screen and (max-width:399px){
-    .table{
-        width: 95%;
-        margin: 0px auto;
-    }
-    .table td:nth-child(1), .table th:nth-child(1) {
-        width: 10%;
-    }
-    .table td:nth-child(2), .table th:nth-child(2) {
-        width: 90%;
-    }
-} */
