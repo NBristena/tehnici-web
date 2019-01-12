@@ -4,18 +4,34 @@ async function manageData( method, myData){
     switch(method){
         case 'POST':
             await postData (url, myData);
-            break;
+        break;
 
         case 'GET':
             response = await getTable();
-            break;
+        break;
 
         case 'PUT':
             await putData (url, myData);
-            break;
+        break;
+
+        case 'PUTafterDELETE':
+            await putDataAfterDelete (url, myData);
+        break;
 
         case 'DELETE':
             await deleteData(url, myData);
+            // let deletedId = myData;
+            // let movieList = await manageData('GET','');
+            // for(let i of movieList){
+            //     if(i.id > deletedId){
+            //         var newData={
+            //             id: i.id-1,
+            //             title: i.title,
+            //             seen: i.seen
+            //         };
+            //         await manageData('PUT', newData);
+            //     }
+            // }
             break;
 
         default:
@@ -67,5 +83,21 @@ async function deleteData (url, id) {
     });
     
     var response = await res.json();
+    return response;
+}
+
+async function putDataAfterDelete (url, myData) {
+    let id = myData.id + 1;
+    var myJSON = JSON.stringify(myData);
+    let res = await fetch(url+id, 
+    {
+        headers: {'Content-Type': 'application/json'}, 
+        method: "PUT", 
+        body:myJSON
+    });
+    
+    var response = await res.json();
+    console.log("data was put");
+    console.log(response);
     return response;
 }

@@ -110,4 +110,24 @@ async function submitDelete(id){
     }
     await manageData('DELETE',movieId);
     location.reload();
+
+    // for(let i of movieList){
+    //     if(i.id > movieId){
+    //         newId = i.id - 1;
+    //         var newData={
+    //             id: newId,
+    //             title: i.title,
+    //             seen: i.seen
+    //         };
+    //         putAfterDelete(newData);
+    //     }
+    // }
+
 }
+async function putAfterDelete(newData){
+    await manageData('PUTafterDELETE', newData);
+    
+}
+
+  
+  
